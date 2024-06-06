@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="gioco testa o croce">
+    <meta name="keywords" content="gioco, testa, croce">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--collegamento CSS esterno-->
+    <link rel="stylesheet" href="assets/css/stileGioco.css">
+
+    <title>Testa o croce?</title>
+</head>
+
+
+<body>
+    <div id="sfondoColor">
+        <aside id="sfondo">
+            <div id="alert" class="bordi">
+                <p>Benvenuti! <br>
+                    Clicca su testa o croce e vediamo se riesci ad indovinare...
+                    <br>
+                    <button id="start" class="bordi">Start</button>
+                </p>
+            </div>
+        </aside>
+
+        <header>
+            <h1 class="centro">
+                Testa o croce?
+            </h1>
+        </header>
+
+        <main>
+            <!--Immagine moneta-->
+            <div id="immagine">
+                <img src="assets/immagini/moneta-removebg-preview.png" alt="moneta">
+            </div>
+
+            <!--I due bottoni-->
+            <section class="bottoni">
+                <button type="button" id="bottoneTesta" class="bordi">
+                    Testa
+                </button>
+                <button type="button" id="bottoneCroce" class="bordi">
+                    Croce
+                </button>
+            </section>
+
+            <!--Punteggi-->
+            <section class="centro">
+                <div id="punteggYou">
+                    <p>YOU</p>
+                    <div id="puntiYou">0</div>
+                </div>
+                <div id="punteggCPU">
+                    <p>CPU</p>
+                    <div id="puntiCpu">0</div>
+                </div>
+            </section>
+
+            <!--Tasto rigioca che compare insieme alla risposta-->
+            <section id="rigiocadiv" class="centro">
+                <!--Risposta nascosta al caricamento della pagina-->
+                <div id="risposta">
+                    risposta
+                </div>
+                <p id="rigioca" class="bordi">
+                    Rigioca
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <p>Questo sito è stato realizzato da Federica Chiantini durante il corso di HTML e CCS e il corso di
+                    Javascript di base di <a href="http://www.labforweb.it" target="_blank">LABFORWEB</a></p>
+                <p>&copy; Copyright 2024</p>
+            </div>
+        </footer>
+
+        <!--collegamento Javascript-->
+        <script src="assets/Javascript/gioco.js"></script>
+
+    </div>
+</body>
+
+</html>
