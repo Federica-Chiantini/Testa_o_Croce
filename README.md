@@ -16,15 +16,18 @@ Compare anche un messaggio a schermo con il risultato, e viene anche attivata la
 
        ------------------------------------------------------------------------------------------------------
 
-🇬🇧 ENGLISH: A project designed to recall the classic game of "heads or tails". 
-When you are opening the page, a welcome popup appears after 1 second, thanks to SetInterval. Below it an additional HTML element (called #sfondo) prevents the user from starting the game, unless they first click on the button inside the popup. 
-To be able to make sure that this element covers the entire playing field, I assigned in the CSS the height and the width to 100%, a z-index is lower than the popup but higher than the homepage, adding to it the position fixed.
-Clicking on the button, the user can start the game. In the meantime a number from 1 to 2 is generated thanks to Math.floor, which takes care of rounding the number, with a + 1 to make sure that the random number is between 1 and 2.
-I created two events for each button, which call external functions; their job si to make a comparison between the drawn number and the number corresponding to the key (1 head, 2 tails).
-Two variables with the score are recalled and assigned the point to the winner.
-To make these comparisons I used if/else statements where I inserted the possible outcomes of the game.
-A message with the result appears in the homepage, with the addition of the button to replay, avoiding that the scores can being deleted.
-By pressing this button, a new number is generated and a new game can be started.
-I've also manage the change the coin image, according to the drawn number, using the setAttribute to change the src of the image.
-The page is responsive, all of the dimensions are in percentage and I have used the MediaQueries to adapt it to different screen sizes. 
-The webpage is made using the mobile first approach, and using display: flex for the horizontal alignments.
+🇬🇧 ENGLISH: A project designed to recall the classic game of "heads or tails".
+
+📄 HTML: The game is divided into 3 sections, header, main and footer. A fourth element, a div tag, there is a popup message. All the main function of the game is inside the main section.
+
+✏️ CSS: The webpage is made with the idea of Mobile first approach, using 2 main contrasting colors (gray and petrol green), and positioning the main image at the center of the page, above the two buttons.
+It is a responsive design page, thanks to the use of 3 Media Queries at different breakpoints (460px, 630px and 765px) to fix the style of the image and the buttons.
+A Popup window is positioned with absolute position on top of the play area, with a background underneath (with fixed position), that is covering the playfield, making it not clickable. The z-index property has the job to decide the order of these elements.
+During the game few aspects of the play area can games, as the coin face, the score, ect. 
+The horizontal alignments are made with the flexbox layout method.
+
+💻JAVASCRIPT: When you are opening the page, a welcome popup opens after 1 second, thanks to a setInterval that calls the function that brings up these two elements (function iniziale()).
+Meanwhile, when the page is opened, a number from 1 to 2 is drawn, saved in the a variable (number), which decides whether the face of the coin to be shown will be heads (1) or tails (2). Math.floor(Math.random())+1 is using to extract and round the drawn number.
+Each button has its own click event which, depending on the number drawn, calls one of the functions that decree victory or defeat (funtion Vinto() and function Perso()), as well as changing the image of the coin relative to the drawn number.
+The variables pYou and pCpu are made to keep the score without the points being deleted when the game is restarted, because they are declared external to any function.
+A message also appears on the screen with the result, and the Risultato() function is also activated, which allows the button to appear to start a new game without resetting the points. When you click on the rigioca button, the image of the coin will also become smooth and a new number will be drawn.
