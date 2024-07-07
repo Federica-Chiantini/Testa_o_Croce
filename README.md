@@ -1,14 +1,15 @@
 ITALIAN: Progetto ideato richiamando il classico gioco del "testa o croce".
-All'apertura della pagina si apre dopo 1 secondo un popup di benvenuto, effetto realizzato grazie a SetInterval. Sotto di esso un ulteriore elemento HTML (chiamato #sfondo) impedisce all'utente di iniziare il gioco, se prima non clicca nel tasto dentro al popup.
-Per riuscire a fare in modo che questo elemento copra tutto il campo da gioco ho assegnato nel CSS le grandezze al 100%, uno z-index inferiore al popup ma superiore a quello della homepage e un position fixed.
-Cliccato sul bottone si inizia con il gioco, nel frattempo viene generato un numero da 1 a 2 grazie a Math.floor, che si occupa di far arrotondare il numero, con un + 1 per fare in modo che venga estratto uno di questi due numeri.
-Ho creato due eventi per ogni bottone, che richiamano funzioni con nome esterne, che fanno un confronto tra il numero estratto e il numero corrispondente al tasto (1 testa, 2 croce).
-Due variabili con il punteggio vengono richiamate e assegnano il punto a chi ha vinto, mostrandolo a schermo. 
-Per fare questi confronti ho usato degli if/else statement dove ho inserito le ipotesi di risultato possibili del gioco.
-Un messaggio con l'esito della partita compare, con l'aggiunta del bottone per rigiocare senza che vengano cancellati i punteggi.
-Premuto questo tasto, si genera un nuovo numero e si puo' iniziare una nuova partita.
-Ho fatto in modo che venga anche a cambiarsi l'immagine della moneta in base al numero estratto, usando il setAttribute per cambiare src dell'immagine.
-Ho voluto rendere il sito responsive usando grandezze in percentuale e inserendo della MediaQueries in base alla grandezza schermo, il sito e' pensato con l'approccio mobile first e gli affiancamenti orizzontali sono stati realizzati con display: flex.
+HTML: Divisione in 3 sezioni, header, main e footer e un quarto div con all'interno la struttura del messaggio di benvenuto. Struttura del gioco concentrata nel main.
+CSS: Il sito e' realizzato con approccio Mobile First, usando 2 colori principali in contrasto (grigio e verde petrolio), e parte centrale con immagine della moneta e tasti laterali.
+Si presenta responsive grazie all'uso di 3 Media Queries a diverse dimensioni (460px, 630px e 765px) che modificano lo stile dell'immagine e dei bottoni in questi breakpoint.
+Finestra di popup e posizionata grazie a position absolute e sfondo sottostante con un position fixed, inserito per fare in modo che il gioco sottostante non sia cliccabile. Con misure diverse di z-index sono riuscita a dargli un posizionamento diverso anche in profondita'.
+In base alle dinamiche di gioco, alcuni aspetti come i punteggi e il messaggio finale cambiano, cosi come anche l'immagine della moneta in base al numero estratto.
+Importante che per gli allineamenti orizzontali ho optato per una soluzione con flexbox che ho trovato piu' veloce e adatta per questa interfaccia.
+JAVASCRIPT: All'apertura della pagina si apre dopo 1 secondo un popup di benvenuto, grazie ad un setInterval che richiama la funzione che fa apparire questi due elementi che si trovano sopra il gioco(function iniziale()).
+Nel frattempo, all'apertura della pagina, viene estratto un numero da 1 a 2, salvanto nella variabile numero, che decide se la faccia della moneta da mostrare sara' testa (1) o croce (2). Utilizzo di Math.floor(Math.random())+1 per estrarre, arrotondare e fare in modo che il numero estratto sia 1 o 2.
+Ogni bottone ha un suo evento click che, in base al numero estratto, richiama una delle funzioni che decretano la vittoria o la sconfitta (function Vinto() e function Perso()), cosi come si cambia l'immagine della moneta relativa al numero estratto.
+Grazie alle variabili esterne pYou e pCpu vengono aggiunti i punteggi ad ogni caso senza che al riavvio della partita vengano cancellati i punti.
+Compare anche un messaggio a schermo con il risultato, e viene anche attivata la function Risultato(), che permette di far comparire il pulsante per iniziare una nuova partita senza far azzerare i punti. Al click sul pulsante rigioca anche l'immagine della moneta tornera' liscia e verra' estrato un nuovo numero.
 
 
 ENGLISH: A project designed to recall the classic game of "heads or tails". 
