@@ -14,7 +14,7 @@ Ogni bottone ha un suo evento click che, in base al numero estratto, richiama un
 Grazie alle variabili esterne pYou e pCpu vengono aggiunti i punteggi ad ogni caso senza che al riavvio della partita vengano cancellati i punti.
 Compare anche un messaggio a schermo con il risultato, e viene anche attivata la function Risultato(), che permette di far comparire il pulsante per iniziare una nuova partita senza far azzerare i punti. Al click sul pulsante rigioca anche l'immagine della moneta tornera' liscia e verra' estrato un nuovo numero.
 
-                      --------------------------------------------------------------------------------------------------------------
+       ------------------------------------------------------------------------------------------------------
 
 🇬🇧 ENGLISH: A project designed to recall the classic game of "heads or tails". 
 When you are opening the page, a welcome popup appears after 1 second, thanks to SetInterval. Below it an additional HTML element (called #sfondo) prevents the user from starting the game, unless they first click on the button inside the popup. 
