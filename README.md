@@ -1,3 +1,5 @@
+![Screenshot of the game.](/immaginiSchermata/homepage.png)
+
 🇮🇹 ITALIAN: Progetto ideato richiamando il classico gioco del "testa o croce".
 
 📄 HTML: Divisione in 3 sezioni, header, main e footer e un quarto div con all'interno la struttura del messaggio di benvenuto. Struttura del gioco concentrata nel main.
@@ -14,7 +16,7 @@ Ogni bottone ha un suo evento click che, in base al numero estratto, richiama un
 Grazie alle variabili esterne pYou e pCpu vengono aggiunti i punteggi ad ogni caso senza che al riavvio della partita vengano cancellati i punti.
 Compare anche un messaggio a schermo con il risultato, e viene anche attivata la function Risultato(), che permette di far comparire il pulsante per iniziare una nuova partita senza far azzerare i punti. Al click sul pulsante rigioca anche l'immagine della moneta tornera' liscia e verra' estrato un nuovo numero.
 
-       ------------------------------------------------------------------------------------------------------
+![Screenshot of the game.](/immaginiSchermata/primaPagina.png)
 
 🇬🇧 ENGLISH: A project designed to recall the classic game of "heads or tails".
 
@@ -31,3 +33,5 @@ Meanwhile, when the page is opened, a number from 1 to 2 is drawn, saved in the 
 Each button has its own click event which, depending on the number drawn, calls one of the functions that decree victory or defeat (funtion Vinto() and function Perso()), as well as changing the image of the coin relative to the drawn number.
 The variables pYou and pCpu are made to keep the score without the points being deleted when the game is restarted, because they are declared external to any function.
 A message also appears on the screen with the result, and the Risultato() function is also activated, which allows the button to appear to start a new game without resetting the points. When you click on the rigioca button, the image of the coin will also become smooth and a new number will be drawn.
+
+![Screenshot of the game.](/immaginiSchermata/punteggio.png)
